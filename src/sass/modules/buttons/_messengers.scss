@@ -1,0 +1,25 @@
+.messengers {
+	display: flex;
+
+	&__btn {
+		width: 30rem;
+		height: 30rem;
+		&:not(:last-child) {
+			margin-right: 15rem;
+		}
+		&_red {
+			fill: $red;
+		}
+
+		@include small-tablet {
+			&:not(:last-child) {
+				margin-right: 12rem;
+			}
+		}
+
+		@include large-mobile {
+			width: 24rem;
+			height: 24rem;
+		}
+	}
+}

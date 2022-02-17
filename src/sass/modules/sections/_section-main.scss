@@ -1,0 +1,181 @@
+.main {
+	padding: 186rem 0 0 0;
+	background: linear-gradient(180deg, #FFFAFA 0%, #F5E7E7 100%);
+	overflow: hidden;
+
+	@include large-mobile {
+		padding-top: 26rem;
+	}
+
+	&.animate {
+		.main {
+			&__title, &__item, &__registry {
+				opacity: 0;
+				transform: translateY(25rem);
+				transition-duration: .4s;
+				transition-timing-function: ease-in-out;
+			}
+			&__registry {
+				opacity: 0;
+				transform: translateY(-25rem);
+			}
+			&__car {
+				transform: translateX(25%);
+				opacity: 0;
+				transition-duration: 1.2s;
+				transition-timing-function: ease-in-out;
+			}
+		}
+		&.show {
+			.main {
+				&__title, &__item, &__registry {
+					opacity: 1;
+					transform: translateY(0);
+				}
+				&__car {
+					transform: translateX(0);
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	&__wrap {
+		padding-bottom: 166rem;
+
+		@include large-mobile {
+			padding-bottom: 0;
+		}
+	}
+
+	&__content {
+		max-width: 600rem;
+		position: relative;
+		z-index: 2;
+	}
+
+	&__list {
+		padding-top: 27rem;
+
+		@include large-mobile {
+			padding-top: 5rem;
+		}
+	}
+
+	&__title {
+		transition-delay: .4s;
+	}
+
+	&__item {
+		width: 50%;
+		margin-top: 33rem;
+		display: flex;
+		&:first-child {
+			transition-delay: .6s;
+		}
+		&:nth-child(2) {
+			transition-delay: .8s;
+		}
+		&:nth-child(3) {
+			transition-delay: 1s;
+		}
+		&:nth-child(4) {
+			transition-delay: 1.2s;
+		}
+
+		@include large-mobile {
+			margin-top: 27rem;
+		}
+	}
+
+	&__icon {
+		width: 30rem;
+		margin-right: 11rem;
+		flex-shrink: 0;
+
+		@include large-mobile {
+			width: 24rem;
+			margin-right: 8rem;
+		}
+	}
+
+	&__text {
+		font-size: 20rem;
+		font-weight: 600;
+		line-height: 120%;
+		font-family: 'Montserrat Alternates';
+		max-width: 190rem;
+
+		@include large-mobile {
+			font-size: 14rem;
+		}
+	}
+
+	&__registry {
+		margin-top: 60rem;
+		padding: 16rem 20rem;
+		display: flex;
+		align-items: center;
+		max-width: 496rem;
+		border: 1px solid rgba(228, 61, 57, 0.3);
+		border-radius: 200rem;
+		transition-delay: 1.4s;
+		&-icon {
+			width: 40rem;
+			border-radius: 100%;
+			overflow: hidden;
+			flex-shrink: 0;
+			margin-right: 16rem;
+			img {
+				mix-blend-mode: overlay;
+			}
+		}
+		&-text {
+			font-size: 14rem;
+		}
+
+		@include large-mobile {
+			margin-top: 32rem;
+			max-width: 278rem;
+			padding: 7rem 9rem;
+			&-icon {
+				width: 24rem;
+				margin-right: 12rem;
+			}
+			&-text {
+				font-size: 8rem;
+			}
+		}
+	}
+
+	&__scene {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		margin-left: 10rem;
+		width: 950rem;
+		pointer-events: none;
+
+		@include large-mobile {
+			position: relative;
+			left: auto;
+			bottom: auto;
+			width: 450rem;
+			margin-top: 99rem;
+			margin-left: 27rem;
+		}
+	}
+
+	&__car {
+		position: absolute;
+		bottom: 114rem;
+		left: 118rem;
+		width: 924rem;
+
+		@include large-mobile {
+			left: 48rem;
+			bottom: 70rem;
+			width: 307rem;
+		}
+	}
+}

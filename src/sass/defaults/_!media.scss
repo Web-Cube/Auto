@@ -1,0 +1,110 @@
+
+// max-screen
+@mixin hd($offset: 0) {
+	@media only screen and (max-width: #{1920 + $offset}px) {
+		@content;
+	}
+}
+
+@mixin mackbook($offset: 0) {
+	@media only screen and (max-width: #{1700 + $offset}px) {
+		@content;
+	}
+}
+
+@mixin large-desktop($offset: 0) {
+	@media only screen and (max-width: #{1440 + $offset}px) {
+		@content;
+	}
+}
+
+@mixin small-desktop($offset: 0) {
+	@media only screen and (max-width: #{1300 + $offset}px) {
+		@content;
+	}
+}
+
+@mixin large-tablet($offset: 0) {
+	@media only screen and (max-width: #{1120 + $offset}px) {
+		@content;
+	}
+}
+
+@mixin middle-tablet($offset: 0) {
+	@media only screen and (max-width: #{980 + $offset}px) {
+		@content;
+	}
+}
+
+@mixin small-tablet($offset: 0) {
+	@media only screen and (max-width: #{820 + $offset}px) {
+		@content;
+	}
+}
+
+@mixin large-mobile($offset: 0) {
+	@media only screen and (max-width: #{580 + $offset}px) {
+		@content;
+	}
+}
+
+@mixin small-mobile($offset: 0) {
+	@media only screen and (max-width: #{440 + $offset}px) {
+		@content;
+	}
+}
+// min-screeen
+
+@mixin min-hd() {
+	@media only screen and (min-width: 1921px) {
+		@content;
+	}
+}
+
+@mixin min-mackbook() {
+	@media only screen and (min-width: 1700px) {
+		@content;
+	}
+}
+
+@mixin min-large-desktop() {
+	@media only screen and (min-width: 1440px) {
+		@content;
+	}
+}
+
+@mixin min-small-desktop() {
+	@media only screen and (min-width: 1300px) {
+		@content;
+	}
+}
+
+@mixin min-large-tablet() {
+	@media only screen and (min-width: 1120px) {
+		@content;
+	}
+}
+
+@mixin min-middle-tablet() {
+	@media only screen and (min-width: 981px) {
+		@content;
+	}
+}
+
+@mixin min-small-tablet() {
+	@media only screen and (min-width: 820px) {
+		@content;
+	}
+}
+
+@mixin min-large-mobile() {
+	@media only screen and (min-width: 580px) {
+		@content;
+	}
+}
+
+@mixin min-small-mobile() {
+	@media only screen and (min-width: 420px) {
+		@content;
+	}
+}

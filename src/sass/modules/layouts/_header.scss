@@ -1,0 +1,261 @@
+.header {
+	position: absolute;
+	z-index: 100;
+	left: 0;
+	top: 0;
+	width: 100%;
+	padding: 30rem 0;
+
+	@include large-mobile {
+		position: sticky;
+		background: #FFFAFA;
+		padding: 20px 0;
+		border-bottom: 1px solid $red;
+	}
+
+	&__logo {
+		display: block;
+		width: 251rem;
+		position: relative;
+		z-index: 2;
+
+		@include small-tablet {
+			width: 230rem;
+		}
+
+		@include large-mobile {
+			width: 162rem;
+		}
+	}
+
+	&__nav {
+		list-style: none;
+		margin-left: 64rem;
+		&-item {
+			&:not(:first-child) {
+				margin-left: 40rem;
+			}
+		}
+		&-link {
+			display: block;
+			font-weight: 500;
+			transition: ease .2s;
+			font-size: 18rem;
+
+			&:after {
+				content: '';
+				display: block;
+				height: 1px;
+				background: $red;
+				transition: ease .2s;
+				transform: scaleX(0);
+			}
+			&:hover {
+				color: $red;
+				&:after {
+					transform: scaleX(1);
+				}
+			}
+		}
+
+		@include small-tablet {
+			margin-left: 30rem;
+			&-item {
+				&:not(:first-child) {
+					margin-left: 25rem;
+				}
+			}
+		}
+
+		@include large-mobile {
+			display: none;
+		}
+	}
+	&__contact {
+		&-item {
+			&:not(:last-child) {
+				margin-right: 32rem;
+			}
+		}
+
+		@include small-tablet {
+			&-item {
+				&:not(:last-child) {
+					margin-right: 25rem;
+				}
+			}
+		}
+
+		@include large-mobile {
+			display: none;
+		}
+	}
+
+	&__phone {
+		display: block;
+		font-size: 18rem;
+		font-weight: 500;
+	}
+
+	&__adress {
+		font-size: 16rem;
+		margin-top: 4rem;
+	}
+
+	&__messengers {
+		margin-left: 37rem;
+
+		@include small-tablet {
+			margin-left: 30rem;
+		}
+	}
+
+	&__btn {
+		margin-left: 24rem;
+
+		@include small-tablet {
+			display: none;
+		}
+	}
+
+	&__burger {
+		display: none;
+		width: 30rem;
+		height: 16rem;
+		margin-left: 24rem;
+		transition: ease .3s;
+		position: relative;
+		z-index: 2;
+		&-line {
+			height: 2px;
+			background: $black;
+			transition: ease .3s;
+			&:not(:first-child) {
+				margin-top: 6rem;
+				&:nth-child(2) {
+					margin-left: 6rem;
+				}
+			}
+		}
+
+		&.is-active {
+			padding-left: 6rem;
+			padding-top: 8rem;
+			.header__burger {
+				&-line {
+					width: 22rem;
+					&:nth-child(2) {
+						display: none;
+					}
+					&:first-child {
+						transform: rotate(45deg);
+					}
+					&:last-child {
+						margin-top: -2px;
+						transform: rotate(-45deg);
+					}
+				}
+			}
+		}
+		@include large-mobile {
+			display: block;
+		}
+	}
+}
+
+.mobile {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+
+	visibility: hidden;
+	opacity: 0;
+	transition: ease .3s;
+
+	&.is-active {
+		visibility:visible;
+		opacity: 1;
+
+		.mobile {
+			&__box {
+				opacity: 1;
+				visibility: visible;
+				transform: translateY(0);
+			}
+		}
+	}
+
+	&__bg {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(42, 50, 70, 0.1);
+	}
+
+	&__box {
+		background: #F8F8F8;
+		border-radius: 0px 0px 16px 16px;
+		padding: 79px 0 30px 0;
+		position: relative;
+		text-align: center;
+		visibility: hidden;
+		opacity: 0;
+		transition: ease .4s;
+		transform: translateY(-25rem);
+		transition-delay: .1s;
+	}
+
+	&__contact {
+		margin-top: 36px;
+		&-item {
+			&:not(:first-child) {
+				margin-top: 24rem;
+			}
+		}
+	}
+
+	&__phone {
+		display: block;
+		font-size: 18rem;
+		font-weight: 500;
+	}
+
+	&__adress {
+		font-size: 16rem;
+		margin-top: 4rem;
+	}
+
+	&__email {
+		font-size: 17rem;
+		color: $red;
+	}
+}
+
+.mobile-contact {
+	display: none;
+	background: $red;
+	color: #fff;
+	padding: 9rem 0 13rem 0;
+	@include large-mobile {
+		display: block;
+	}
+
+	&__column {
+		&_left {
+			text-align: right;
+		}
+	}
+
+	&__phone {
+		font-size: 14rem;
+		font-weight: 500;
+	}
+
+	&__adress {
+		font-size: 10rem;
+	}
+}

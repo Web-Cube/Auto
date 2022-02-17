@@ -1,0 +1,98 @@
+.mfp-container{
+	padding: 16px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.mfp-bg{
+	background: rgba(42, 50, 70, 0.1);
+	transition: ease .5s;
+	opacity: 0;
+	&.mfp-ready {
+		opacity: 1;
+	}
+	&.mfp-removing {
+		opacity: 0;
+	}
+}
+.mfp-counter{
+	display: none;
+}
+
+.mfp-image-holder {
+	background: rgba(42, 50, 70, 0.1);
+}
+
+.mfp-content{
+	@extend .clear;
+}
+
+.modals{
+	margin: auto;
+	position: relative;
+	width: 100%;
+	max-width: 593rem;
+	border-radius: 16rem;
+}
+
+.css-modal-animate{
+	// start state
+
+	overflow: hidden;
+
+	.modals__arrow{
+		opacity: 0;
+	}
+
+	.mfp-bg {
+		opacity: .0;
+	}
+
+	.modals, .mfp-figure{
+		transition: all .5s ease;
+		opacity: 0;
+
+		&_right{
+
+			transform: translate(25rem, 0);
+		}
+
+		&_center{
+			transform: translate(0rem, 25rem);
+		}
+	}
+
+	// animate in
+	&.mfp-ready{
+		.modals__arrow{
+			opacity: 1;
+		}
+		.modals, .mfp-figure{
+			transform: translate(0, 0);
+			opacity: 1;
+		}
+	}
+
+	// animate out
+	&.mfp-removing{
+		.modals__arrow{
+			opacity: 0;
+		}
+		.modals, .mfp-figure{
+			opacity: 0;
+
+			&_right{
+				transform: translate(25rem, 0);
+			}
+
+			&_center{
+				transform: translate(0rem, 25rem);
+			}
+		}
+	}
+
+	@include small-tablet {
+		.modals, .mfp-figure{
+			transform: translate(0, 0)!important;
+		}
+	}
+}

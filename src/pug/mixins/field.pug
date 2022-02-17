@@ -1,0 +1,8 @@
+mixin field (label, textarea = false )
+	+e.LABEL.field.field__
+		if (textarea)
+			+e.TEXTAREA.input._textarea&attributes(attributes)
+		else
+			+e.INPUT.input&attributes(attributes)
+		if (label)
+			+e.SPAN.placeholder=label

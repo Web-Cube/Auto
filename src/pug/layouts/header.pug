@@ -1,0 +1,51 @@
++b.HEADER.header
+	+e.wrap.wrap
+		+e.row.flex._vertical._justify
+			+e.column._left.flex._vertical
+				+e.A.logo(href="/home.html")
+					img(src="/app/img/logo.svg")
+				+e.UL.nav.flex
+					+e.LI.nav-item
+						+e.A.nav-link(href="#") О нас
+					+e.LI.nav-item
+						+e.A.nav-link(href="#") Контакты
+			+e.column._right.flex._vertical
+				+e.contact.flex
+					+e.contact-item
+						+e.A.phone(href="tel:+78125657496") +7 (812) 565-74-96
+						+e.adress.color-gray Бабушкина ул. д.21
+					+e.contact-item
+						+e.A.phone(href="tel:+78125657521") +7 (812) 565-75-21
+						+e.adress.color-gray Северный пр. д.5к3
+				+e.messengers.messengers__
+					+e.A.btn._red(href="#")
+						+icon('whatsapp')
+					+e.A.btn._red(href="#")
+						+icon('telegram')
+				+e.A.btn.btn-border(href="#") Заказать звонок
+				+e.burger.js-burger
+					+e.burger-line
+					+e.burger-line
+					+e.burger-line
+	+e.mobile.mobile__.js-mobile
+		+e.bg.js-mobile-close
+		+e.box
+			+e.wrap.wrap
+				+e.contact
+					+e.contact-item
+						+e.A.phone(href="tel:+78125657496") +7 (812) 565-74-96
+						+e.adress.color-gray Бабушкина ул. д.21
+					+e.contact-item
+						+e.A.phone(href="tel:+78125657521") +7 (812) 565-75-21
+						+e.adress.color-gray Северный пр. д.5к3
+					+e.contact-item
+						+e.A.email(href="mailto:info@doverie-avto.ru") info@doverie-avto.ru
++b.mobile-contact
+	+e.wrap.wrap
+		+e.row.flex._justify
+			+e.column._left
+				+e.A.phone(href="tel:+78125657496") +7 (812) 565-74-96
+				+e.adress Бабушкина ул. д.21
+			+e.column._right
+				+e.A.phone(href="tel:+78125657521") +7 (812) 565-75-21
+				+e.adress Северный пр. д.5к3

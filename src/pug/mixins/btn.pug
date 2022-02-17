@@ -1,0 +1,11 @@
+mixin btn(link = true, arrow = true)
+	if (link)
+		+e.A.btn.btn__(href="#")&attributes(attributes)
+			+e.SPAN.text
+				if block
+					block
+	else
+		+e.BUTTON.btn.btn__()&attributes(attributes)
+			+e.SPAN.text
+				if block
+					block
