@@ -1,0 +1,54 @@
++b.SECTION.calculator.js-calc
+	+e.wrap.wrap
+		+e.row.flex._justify
+			+e.column._left
+				+e.H2.title.h2 Калькулятор займа
+				+e.desc.color-gray Рассчитайте сумму к выплате и ежемесячный платеж.
+				+e.amount.item-slider__
+					input#amountValue(type="hidden" value="150000")
+					+e.title.p20.color-gray Сумма займа:
+					+e.counter
+						span.js-amount 150 000
+						|  ₽
+					+e.scale#amount
+					+e.bottom.flex._justify.color-gray
+						+e.column 50 000
+						+e.column 500  000
+						+e.column 1 000 000
+				+e.date.item-slider__
+					input#amountDateValue(type="hidden" value="30")
+					+e.title.p20.color-gray Срок займа:
+					+e.counter
+						span.js-amount-date 30
+						|  дней
+					+e.scale#amountDate
+					+e.bottom.flex._justify.color-gray
+						+e.column 14
+						+e.column 180
+						+e.column 365
+				+e.select.select__.js-select
+					input.js-select-input(type="hidden" value="")
+					+e.head.js-select-head
+						+e.label.js-select-label Выбрать акцию
+						+e.arrow
+							+icon('dropDown')
+					+e.list
+						+e.item.js-select-item(data-value="Пригласить друга") Пригласить друга
+						+e.item.js-select-item(data-value="Новогодние скидки") Новогодние скидки
+						+e.item.js-select-item(data-value="День всех влюбленных") День всех влюбленных
+			+e.column._right
+				+e.result
+					+e.result-list
+						+e.result-item
+							+e.result-title Ваша ставка:
+							+e.result-text.color-red 3.5%
+						+e.result-item
+							+e.result-title Сумма процентов:
+							+e.result-text
+								span.js-amount-percent 65 000
+								|  ₽
+						+e.result-item
+							+e.result-title Сумма к возврату:
+							+e.result-text
+								span.js-amount-return 224 500
+								|  ₽

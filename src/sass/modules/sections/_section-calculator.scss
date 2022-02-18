@@ -1,0 +1,52 @@
+.calculator {
+	margin-top: 150rem;
+
+	&__desc {
+		margin-top: 20rem;
+	}
+
+	&__column {
+		&_left {
+			width: 618rem;
+		}
+		&_right {
+			width: 495rem;
+		}
+	}
+
+	&__amount {
+		margin-top: 80rem;
+	}
+
+	&__date {
+		margin-top: 32rem;
+	}
+
+	&__select {
+		margin-top: 52rem;
+	}
+
+	&__result {
+		position: relative;
+		background: #F8F8F8;
+		border-radius: 12rem;
+		padding: 60rem;
+		&-wrap {
+			max-width: 264rem;
+		}
+		&-item {
+			&:not(:first-child) {
+				margin-top: 32rem;
+			}
+		}
+		&-title {
+			font-size: 16rem;
+			font-weight: 600;
+			font-family: 'Montserrat Alternates';
+		}
+		&-text {
+			margin-top: 8rem;
+			font-size: 30rem;
+		}
+	}
+}

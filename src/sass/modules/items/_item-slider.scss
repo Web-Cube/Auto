@@ -1,0 +1,50 @@
+.item-slider {
+	&__scale {
+		height: 4px;
+		background: #E6E9EF;
+		position: relative;
+	}
+	.ui-slider-range {
+		height: 4px;
+		background: $red;
+	}
+
+	.ui-slider-handle {
+		position: absolute;
+		top: 50%;
+		margin: -12rem 0 0 -12rem;
+		width: 24rem;
+		height: 24rem;
+		border: 4px solid $red;
+		background: #fff;
+		border-radius: 100%;
+		cursor: pointer;
+	}
+
+	&__counter {
+		margin-top: 16rem;
+		font-size: 30rem;
+	}
+
+	&__scale {
+		margin-top: 18rem;
+		margin-left: 12rem;
+		margin-right: 12rem;
+	}
+
+	&__bottom {
+		font-size: 14rem;
+		margin-top: 18rem;
+	}
+
+	&__column {
+		width: 30%;
+		&:nth-child(2) {
+			text-align: center;
+			padding-right: 30rem;
+		}
+		&:last-child {
+			text-align: right;
+		}
+	}
+}
