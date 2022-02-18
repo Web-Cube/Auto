@@ -5,4 +5,17 @@
 	border: none;
 	cursor: pointer;
 	background: $red;
+	height: 60rem;
+	border-radius: 12rem;
+	font-size: 16rem;
+	font-weight: bold;
+	color: #fff;
+	padding: 0 20rem;
+	transition: ease .2s;
+	padding-top: 2rem;
+
+	@include large-mobile {
+		height: 48rem;
+		font-size: 16rem;
+	}
 }

@@ -23,21 +23,9 @@ var forms = {
 				errorPlacement: function (error, element) {
 					//just nothing, empty
 				},
-				highlight: (element, errorClass, validClass) => {
-					$(element)
-						.parent()
-						.addClass(errorClass)
-						.removeClass(validClass);
-				},
-				unhighlight: (element, errorClass, validClass) => {
-					$(element)
-						.parent()
-						.removeClass(errorClass)
-						.addClass(validClass);
-				},
 				submitHandler: (form) => {
 					var data = $(form).serialize();
-					$(form).closest('.js-form-parrent').addClass('sucsess');
+					thank();
 					$.ajax({
 						type: "POST",
 						url: $(form).attr("action"),
@@ -59,6 +47,30 @@ var forms = {
 				},
 			});
 		});
+
+		function thank() {
+			$.magnificPopup.open({
+				tClose: 'Закрыть',
+				removalDelay: 500,
+				fixedContentPos: true,
+				fixedBgPos: true,
+				overflowY: 'hidden',			
+				closeMarkup: '<div class="modals__close close js-close-modal"><svg class="icon icon-close close" viewBox="0 0 612 612"><use xlink:href="/app/icons/sprite.svg#close"></use></svg></div>',
+				mainClass: 'css-modal-animate',				
+				items: {
+					src: "#thank",
+					type: 'inline'
+				},
+				callbacks: {
+					beforeOpen: () => {
+						$('body').addClass('is-modal-open')
+					},
+					beforeClose: () => {
+						$('body').removeClass('is-modal-open')
+					}
+				}
+			}, 0);
+		}
 	},
 
 	events: () => {

@@ -45,7 +45,7 @@ var modals = {
 			fixedContentPos: true,
 			fixedBgPos: true,
 			overflowY: 'hidden',			
-			closeMarkup: '<div class="modals__close close js-close-modal"><svg class="icon icon-close" viewBox="0 0 17 17"><use xlink:href="/app/icons/sprite.svg#close"></use></svg></div>',
+			closeMarkup: '<div class="modals__close close js-close-modal"><svg class="icon icon-close" viewBox="0 0 24 24"><use xlink:href="/app/icons/sprite.svg#close"></use></svg></div>',
 			mainClass: 'css-modal-animate',				
 			items: {
 				src: modal,
@@ -77,10 +77,10 @@ var modals = {
 				fixedContentPos: true,
 				fixedBgPos: true,
 				overflowY: 'hidden',			
-				closeMarkup: '<div class="modals__close close js-close-modal"><svg class="icon icon-close" viewBox="0 0 17 17"><use xlink:href="/app/icons/sprite.svg#close"></use></svg></div>',
+				closeMarkup: '<div class="modals__close close js-close-modal"><svg class="icon icon-close" viewBox="0 0 24 24"><use xlink:href="/app/icons/sprite.svg#close"></use></svg></div>',
 				mainClass: 'css-modal-animate',				
 				items: {
-					src: "#modal-fb",
+					src: "#thank",
 					type: 'inline'
 				},
 				callbacks: {

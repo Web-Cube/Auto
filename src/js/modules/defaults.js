@@ -16,6 +16,7 @@ var defaults = {
 
 			function animateme() {
 			    var viewport_height = viewport().height;
+			    var viewport_width = viewport().width;
 			    var scroll_top = $(window).scrollTop();
 			    $(".js-animateme").each(function(){
 			        var animate_pos = $(this).offset().top;
@@ -25,15 +26,18 @@ var defaults = {
 			        if ( animate_offset ) {
 			        	$(this).data("animate-offset");
 			        } else {
-			        	animate_offset = 3;
+
+			        	if ( viewport_width > 580 ) {
+			        		animate_offset = 2;
+			        	} else {
+			        		animate_offset = 1.65;
+			        	}
 			        }
 
 			        var win_scroll = scroll_top + (viewport_height/animate_offset);
 			        $(this).css("transition-delay",animate_delay+"ms");
 			        if ( win_scroll >= animate_pos ) {
 			            $(this).addClass("show");
-			        } else {
-			            $(this).removeClass("show");
 			        }
 			    });
 			}

@@ -1,0 +1,83 @@
+.form {
+	border-radius: 16rem;
+	box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.1);
+	background: #F8F8F8;
+
+	&__title {
+		@include large-mobile {
+			text-align: center;
+		}
+	}
+
+	&__field {
+		&:not(:first-child) {
+			margin-top: 24rem;
+		}
+
+		@include large-mobile {
+			&:not(:first-child) {
+				margin-top: 16rem;
+			}
+		}
+	}
+
+	&__fields {
+		margin-top: 32rem;
+
+		@include large-mobile {
+			margin-top: 24rem;
+		}
+	}
+
+	&__bottom {
+		margin-top: 24rem;
+		flex-wrap: nowrap;
+		@include large-mobile {
+			margin-top: 16rem;
+			flex-wrap: wrap;
+		}
+	}
+
+	&__btn {
+		width: 228rem;
+		flex-shrink: 0;
+		margin-left: 20rem;
+
+		@include large-mobile {
+			margin-left: 0;
+			width: 100%;
+		}
+	}
+	&__polity {
+		font-size: 12rem;
+
+		@include large-mobile {
+			order: 2;
+			margin-top: 16rem;
+			width: 100%;
+		}
+	}
+
+	&__thank {
+		text-align: center;
+		padding-bottom: 20rem;
+		&-btn {
+			margin-left: 0;
+			margin-top: 48rem;
+		}
+
+		&-desc {
+			margin-top: 20rem;
+		}
+
+		@include large-mobile {
+			padding-bottom: 0;
+			&-desc {
+				margin-top: 8rem;
+			}
+			&-btn {
+				margin-top: 24rem;
+			}
+		}
+	}
+}

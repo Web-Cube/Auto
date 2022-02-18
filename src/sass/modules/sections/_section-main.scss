@@ -156,6 +156,12 @@
 		width: 950rem;
 		pointer-events: none;
 
+		&-bg {
+			&_mobile {
+				display: none;
+			}
+		}
+
 		@include large-mobile {
 			position: relative;
 			left: auto;
@@ -163,6 +169,15 @@
 			width: 450rem;
 			margin-top: 99rem;
 			margin-left: 27rem;
+
+			&-bg {
+				&_mobile {
+					display: block;
+				}
+				&_desktop {
+					display: none;
+				}
+			}
 		}
 	}
 
@@ -174,8 +189,84 @@
 
 		@include large-mobile {
 			left: 48rem;
-			bottom: 70rem;
+			bottom: 85rem;
 			width: 307rem;
 		}
+	}
+}
+
+.main-form {
+	position: relative;
+	z-index: 5;
+	margin-top: -104rem;
+
+	@include large-mobile {
+		margin-top: -75rem;
+	}
+
+	&.animate {
+		.main-form {
+			&__box {
+				opacity: 0;
+				transform: translateY(25rem);
+				transition-duration: .5s;
+				transition-timing-function: ease-in-out;
+				transition-delay: 1.6s;
+			}
+		}
+		&.show {
+			.main-form {
+				&__box {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+		}
+	}
+
+	&__box {
+		padding: 35rem 40rem 45rem 40rem;
+		box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.1);
+		background: #fff;
+		border-radius: 16rem;
+
+		@include large-mobile {
+			padding: 32rem 16rem;
+		}
+	}
+
+	&__title {
+		text-align: center;
+	}
+
+	&__row {
+		margin: 0 -12rem;
+
+		@include large-mobile {
+			padding-top: 8rem;
+		}
+	}
+
+	&__column {
+		padding: 0 12rem;
+		margin-top: 30rem;
+		&:first-child {
+			width: 40.5%;
+		}
+		&:nth-child(2) {
+			width: 30.5%;
+		}
+		&:last-child {
+			width: 29%;
+		}
+
+		@include large-mobile {
+			margin-top: 16rem;
+			width: 100%!important;
+		}
+	}
+
+	&__btn {
+		width: 100%;
 	}
 }

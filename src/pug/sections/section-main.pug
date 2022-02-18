@@ -33,8 +33,22 @@
 				+e.registry-text.color-gray
 					| Сведения о деятельности нашей организации внесены в государственный реестр микрофинансовых организаций.
 		+e.scene
-			+e.scene-bg
+			+e.scene-bg._desktop
 				img(src="/app/img/main__scene.svg")
+			+e.scene-bg._mobile
+				img(src="/app/img/main__scene_mobile.svg")
 			+e.car
 				img(src="/img/main__car.png")
-		
++b.main-form.animate.js-load-animate
+	+e.wrap.wrap
+		+e.box
+			+e.H3.title.h3
+				| Одобрим займ 
+				span.color-red в течении 5 минут
+			+e.FORM.row.flex(action="/app/mail/")
+				+e.column
+					+field(placeholder="Ваше имя" name="name")
+				+e.column
+					+field(placeholder="Номер телефона" name="phone" type="tel")
+				+e.column
+					+btn(false) Оформить заявку

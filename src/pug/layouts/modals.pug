@@ -1,1 +1,28 @@
 +b.modals._center.mfp-hide#recall
+	+e.FORM.form.form__(action="/app/mail/")
+		+e.title.h2 Заказать звонок
+		+e.fields
+			+field(placeholder="Ваше имя" name="name")
+			+field(placeholder="Номер телефона" name="phone" type="tel")
+		+e.bottom.flex._justify
+			+e.polity.color-gray
+				| Нажимая на кнопку, вы даете согласие на обработку ваших персональных данных
+			+btn(false) Перезвоните мне
++b.modals._center.mfp-hide#modal-loan
+	+e.FORM.form.form__(action="/app/mail/")
+		+e.title.h2 Получить займ
+		+e.fields
+			+field(placeholder="Ваше имя" name="name")
+			+field(placeholder="Номер телефона" name="phone" type="tel")
+		+e.bottom.flex._justify
+			+e.polity.color-gray
+				| Нажимая на кнопку, вы даете согласие на обработку ваших персональных данных
+			+btn(false) Отправить заявку
++b.modals._center.mfp-hide#thank
+	+e.form.form__
+		+e.thank
+			+e.thank-title.h2 Ваша заявка успешно отправлена
+			+e.thank-desc.color-gray.p20 Наш специалист свяжется с вами 
+				br
+				| в ближайшее время.
+			+btn(class="__thank-btn js-close-modal") Отлично

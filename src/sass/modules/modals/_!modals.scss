@@ -31,7 +31,23 @@
 	position: relative;
 	width: 100%;
 	max-width: 593rem;
-	border-radius: 16rem;
+	&__form {
+		padding: 48rem;
+
+		@include large-mobile {
+			padding: 32rem 16rem;
+		}
+	}
+
+	&__close {
+		width: 24rem;
+		height: 24rem;
+		position: absolute;
+		right: 16rem;
+		top: 16rem;
+		cursor: pointer;
+		fill: $red;
+	}
 }
 
 .css-modal-animate{

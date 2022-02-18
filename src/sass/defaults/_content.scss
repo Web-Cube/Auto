@@ -50,32 +50,48 @@ q.content ul,
 	font-weight: bold;
 	font-size: 40rem;
 	line-height: 140%;
+
+	@include large-mobile {
+		font-size: 24rem;
+	}
 }
 
 .h3,
 .content h3 {
 	font-family: 'SF Pro Display';
-	font-weight: bold;
-	font-size: 40rem;
+	font-weight: 600;
+	font-size: 28rem;
 	line-height: 140%;
+
+	@include large-mobile {
+		font-size: 18rem;
+	}
 }
 
 .h4,
 .content h4 {
-	font-family: 'SF Pro Display';
-	font-weight: bold;
-	font-size: 28rem;
-	line-height: 140%;
-}
-
-.h5,
-.content h5 {
 	font-family: 'Montserrat Alternates';
 	font-weight: bold;
 	font-size: 24rem;
 	line-height: 140%;
+
+	@include large-mobile {
+		font-size: 20rem;
+	}
+}
+
+.h5,
+.content h5 {
 }
 
 .h6,
 .content h6 {
+}
+
+.p20 {
+	font-size: 20rem;
+
+	@include large-mobile {
+		font-size: 16rem;
+	}
 }
