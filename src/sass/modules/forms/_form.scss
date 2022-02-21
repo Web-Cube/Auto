@@ -9,6 +9,17 @@
 		}
 	}
 
+	&__desc {
+		margin-top: 10rem;
+		padding-bottom: 8rem;
+
+		@include large-mobile {
+			text-align: center;
+			margin-top: 8rem;
+			padding-bottom: 8rem;
+		}
+	}
+
 	&__field {
 		&:not(:first-child) {
 			margin-top: 24rem;
@@ -54,7 +65,9 @@
 		@include large-mobile {
 			order: 2;
 			margin-top: 16rem;
+			font-size: 10rem;
 			width: 100%;
+			max-width: 235rem;
 		}
 	}
 

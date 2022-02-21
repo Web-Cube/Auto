@@ -1,0 +1,131 @@
+.direction {
+	margin-top: 160rem;
+
+	@include large-mobile {
+		margin-top: 60rem;
+		overflow: hidden;
+	}
+
+	&__title {
+		@include large-mobile {
+			font-size: 23rem;
+		}
+	}
+
+	&__head {
+		max-width: 605rem;
+	}
+
+	&__desc {
+		margin-top: 20rem;
+		&_mobile {
+			display: none;
+		}
+
+		@include large-mobile {
+			margin-top: 8rem;
+			max-width: 280rem;
+			&_mobile {
+				display: block;
+			}
+			&_desktop {
+				display: none;
+			}
+		}
+	}
+
+	&__list {
+		padding-top: 20rem;
+		margin-left: -19rem;
+		margin-right: -19rem;
+
+		@include large-mobile {
+			display: none;
+		}
+	}
+
+	&__item {
+		width: 25%;
+		margin-top: 50rem;
+		text-align: center;
+		&:hover {
+			.services__rect {
+				opacity: 1;
+				margin-top: 0;
+			}
+		}
+		&-bottom {
+			margin-top: 20rem;
+		}
+		&-title {
+			font-weight: 600;
+		}
+		&-text {
+			margin-top: 8rem;
+		}
+
+		@include small-tablet {
+			width: 50%;
+		}
+
+		@include large-mobile {
+			width: 100%;
+			margin-top: 0;
+			&-bottom {
+				margin-top: 8rem;
+			}
+			&-title {
+				font-size: 18rem;
+			}
+			&-text {
+				margin-top: 4rem;
+				font-size: 14rem;
+			}
+		}
+	}
+
+	&__img {
+		position: relative;
+		max-width: 317rem;
+		margin-left: auto;
+		margin-right: auto;
+		&-wrap {
+			position: relative;
+		}
+
+		@include large-mobile {
+			max-width: 205rem;
+		}
+	}
+
+	&__rect {
+		position: absolute;
+		top: 6%;
+		width: 46%;
+		height: 46%;
+		left: 26.6%;
+		background: $red;
+		border-radius: 39rem;
+		transform: rotate(-45deg);
+		margin-top: 15rem;
+		transition: ease .3s;
+		opacity: 0;
+		box-shadow: 0px 30rem 60rem rgba(0, 0, 0, 0.1)
+	}
+
+	&__slider {
+		display: none;
+		position: relative;
+
+		@include large-mobile {
+			display: block;
+			margin-top: 23rem;
+		}
+	}
+
+	&__swiper-nav {
+		top: 82rem;
+		width: 100%;
+		justify-content: space-between;
+	}
+}

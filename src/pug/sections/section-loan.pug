@@ -1,0 +1,26 @@
++b.SECTION.loan.animateme.js-animateme
+	+e.wrap.wrap
+		+e.box
+			+e.bg-left
+				+e.bg-wrap._left
+					img.object-fit(src="/app/img/loan__bg-left.svg")
+					img.object-fit(src="/app/img/loan__bg_mobile.svg")
+				+e.car
+					img(src="/img/loan__car.png")
+			+e.bg-right
+				+e.bg-wrap._right
+					img.object-fit(src="/app/img/loan__bg-right.svg")
+					img.object-fit(src="/app/img/loan__bg_mobile.svg")
+			+e.FORM.form.form__(action="/app/mail/")
+				+e.wrap
+					+e.title.h2 Получить деньги под ПТС
+					+e.desc.p20.color-gray
+						| Одобрение займа 
+						span.color-red в течение 5 минут
+					+e.fields
+						+field(placeholder="Ваше имя" name="name")
+						+field(placeholder="Номер телефона" name="phone" type="tel")
+					+e.bottom.flex._justify
+						+e.polity.color-gray
+							| Нажимая на кнопку, вы даете согласие на обработку ваших персональных данных
+						+btn(false) Отправить заявку

@@ -59,7 +59,7 @@
 		min-height: 461rem;
 
 		@include small-tablet {
-			min-height: inherit;
+			min-height: 448px;
 			overflow: visible;
 		}
 

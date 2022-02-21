@@ -1,0 +1,179 @@
+.loan {
+	margin-top: 209rem;
+	overflow: hidden;
+
+	&.animateme {
+		.loan {
+			&__car, &__form, &__bg-left, &__bg-right {
+				transform: translateX(-25%);
+				opacity: 0;
+				transition-duration: .7s;
+				transition-timing-function: ease-out;
+			}
+			&__form {
+				transition-delay: .3s;
+			}
+			&__bg-right {
+				transition-delay: .6s;
+			}
+			&__car {
+				transition-delay: 1s;
+			}
+		}
+		&.show {
+			.loan {
+				&__car, &__form, &__bg-left, &__bg-right {
+					transform: translateX(0);
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	@include large-mobile {
+		margin-top: 52rem;
+		&.animateme {
+			.loan {
+				&__car, &__form, &__bg-left, &__bg-right {
+					opacity: 1;
+					transform: none;
+				}
+			}
+		}
+	}
+
+	.form {
+		padding: 60rem;
+		box-shadow: none;
+		border-radius: 50rem;
+		position: relative;
+		z-index: 2;
+		padding-left: 50%;
+		&__wrap {
+			margin-left: 15rem;
+			max-width: 497rem;
+		}
+		@include small-tablet {
+			padding-left: 47%;
+			&__wrap {
+				max-width: inherit;
+				margin-left: 0;
+			}
+		}
+
+		@include large-mobile(100) {
+			padding-left: 60rem;
+		}
+
+		@include large-mobile {
+			padding: 147rem 16px 32px 16px;
+			border-radius: 32rem;
+		}
+	}
+
+	&__box {
+		position: relative;
+		padding: 19rem 0;
+
+		@include large-mobile {
+			padding: 65rem 0 32px 0;
+		}
+	}
+
+	&__bg {
+		&-left {
+			position: absolute;
+			z-index: 3;
+			top: 0;
+			left: -428rem;
+			width: 818rem;
+			height: 520rem;
+		}
+		&-wrap {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			&_left {
+				border-radius: 100rem;
+			}
+			&_right {
+				border-radius: 40rem;
+				background: $red;
+			}
+			img {
+				&:nth-child(2) {
+					display: none;
+				}
+			}
+		}
+		&-right {
+			position: absolute;
+			top: 50rem;
+			right: -215rem;
+			width: 886rem;
+			height: 410rem;
+		}
+		@include small-tablet {
+			&-left {
+				left: -500rem;
+			}
+		}
+
+		@include large-mobile(100) {
+			&-left, &-right {
+				display: none;
+			}
+		}
+
+		@include large-mobile {
+			&-left {
+				display: block;
+				width: 100%;
+				height: 188rem;
+				left: 0;
+				top: 0;
+			}
+			&-wrap {
+				&_left {
+					border-radius: 40rem;
+				}
+				&_right {
+					border-radius: 25rem;
+					background: none;
+				}
+				img {
+					&:nth-child(1) {
+						display: none;
+					}
+					&:nth-child(2) {
+						display: block;
+					}
+				}
+			}
+			&-right {
+				display: block;
+				width: calc( 100% - 32px );
+				height: 170rem;
+				left: 16px;
+				top: auto;
+				bottom: 0;
+			}
+		}
+	}
+
+	&__car {
+		position: absolute;
+		left: 17rem;
+		top: 89rem;
+		width: 960rem;
+
+		@include large-mobile {
+			left: -14rem;
+			top: 29rem;
+			width: 370rem;
+		}
+	}
+}

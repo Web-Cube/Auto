@@ -1,0 +1,81 @@
+- 
+	var sliderDirection = {
+		slidesPerView: 1,
+		loop: true,
+		speed: 400
+	}
+
++b.SECTION.direction.animateme.js-animateme
+	+e.wrap.wrap
+		+e.head
+			+e.H2.title.h2 Выдаем займ под залог любых транспортных средств
+			+e.desc._desktop.p20.color-gray «Доверие авто» кредитует под залог ПТС легковых, грузовых автомобилей, спец. техники; коммерческого транспорта
+			+e.desc._mobile.p20.color-gray Оформление займа под залог занимает всего 30 минут
+		+e.list.flex
+			+e.item
+				+e.img
+					+e.rect
+					+e.img-wrap
+						img(src="/img/loan__img1.png")
+				+e.item-bottom
+					+e.item-title.h4 Легковые авто
+					+e.item-text Отечественные авто, иномаркии
+			+e.item
+				+e.img
+					+e.rect
+					+e.img-wrap
+						img(src="/img/loan__img2.png")
+				+e.item-bottom
+					+e.item-title.h4 Грузовые авто
+					+e.item-text Газели, тягачи, фуры
+			+e.item
+				+e.img
+					+e.rect
+					+e.img-wrap
+						img(src="/img/loan__img3.png")
+				+e.item-bottom
+					+e.item-title.h4 Спецтехника
+					+e.item-text Трактора, бульдозеры, погрузчики
+			+e.item
+				+e.img
+					+e.rect
+					+e.img-wrap
+						img(src="/img/loan__img4.png")
+				+e.item-bottom
+					+e.item-title.h4 Мототехника
+					+e.item-text Мотоциклы, квадроциклы, скутеры
+		+e.slider.swiper-container.js-slider#direction(data-settings=sliderDirection)
+			.swiper-wrapper
+				+e.slide.swiper-slide
+					+e.item
+						+e.img
+							+e.img-wrap
+								img(src="/img/loan__img1.png")
+						+e.item-bottom
+							+e.item-title.h4 Легковые авто
+							+e.item-text Отечественные авто, иномаркии
+				+e.slide.swiper-slide
+					+e.item
+						+e.img
+							+e.img-wrap
+								img(src="/img/loan__img2.png")
+						+e.item-bottom
+							+e.item-title.h4 Грузовые авто
+							+e.item-text Газели, тягачи, фуры
+				+e.slide.swiper-slide
+					+e.item
+						+e.img
+							+e.img-wrap
+								img(src="/img/loan__img3.png")
+						+e.item-bottom
+							+e.item-title.h4 Спецтехника
+							+e.item-text Трактора, бульдозеры, погрузчики
+				+e.slide.swiper-slide
+					+e.item
+						+e.img
+							+e.img-wrap
+								img(src="/img/loan__img4.png")
+						+e.item-bottom
+							+e.item-title.h4 Мототехника
+							+e.item-text Мотоциклы, квадроциклы, скутеры
+			+swiper-navigation

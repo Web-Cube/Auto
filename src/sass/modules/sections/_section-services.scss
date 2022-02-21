@@ -1,0 +1,188 @@
+.services {
+	margin-top: 200rem;
+
+	@include large-mobile {
+		margin-top: 60rem;
+	}
+
+	&__head {
+		text-align: center;
+	}
+
+	&__desc {
+		margin-top: 20rem;
+	}
+
+	&__list {
+		margin-top: 109rem;
+
+		@include large-mobile {
+			margin-top: 64rem;
+		}
+	}
+
+	&__item {
+		position: relative;
+
+		&:not(:first-child) {
+			margin-top: 29rem;
+		}
+
+		&:nth-child(odd) {
+			.services {
+				&__box {
+					background: #F8F8F8;
+				}
+			}
+		}
+		&:nth-child(even) {
+			.services {
+				&__bg {
+					display: none;
+				}
+			}
+		}
+		&-title {
+			font-weight: 600;
+			line-height: 120%;
+		}
+		&-text {
+			margin-top: 16rem;
+		}
+		&-bottom {
+			margin-top: 32rem;
+			font-weight: 600;
+			font-size: 16rem;
+			font-family: 'Montserrat Alternates';
+		}
+
+		&:hover {
+			.services {
+				&__img {
+					opacity: 1;
+					transform: translateY(-50%) scale(1);
+				}
+				&__bg {
+					margin-left: 0;
+				}
+			}
+		}
+
+		@include large-mobile {
+			&:not(:first-child) {
+				margin-top: 56rem;
+			}
+			&:nth-child(even) {
+				.services {
+					&__box {
+						background: #F8F8F8;
+					}
+				}
+			}
+			&-title {
+				font-size: 16rem;
+				max-width: 258rem;
+			}
+			&-text {
+				font-size: 14rem;
+			}
+			&-bottom {
+				margin-top: 16rem;
+				font-size: 14rem;
+			}
+		}
+	}
+
+	&__box {
+		padding: 32rem 53rem;
+		border-radius: 40rem;
+		display: flex;
+		position: relative;
+
+		@include small-tablet {
+			padding: 32rem;
+		}
+
+		@include large-mobile {
+			padding: 89rem 16px 24px 16px;
+			border-radius: 12px;
+		}
+	}
+
+	&__number {
+		min-width: 43rem;
+		color: $red;
+		font-weight: 600;
+		line-height: 120%;
+
+		@include large-mobile {
+			font-size: 16rem;
+			min-width: 28rem;
+		}
+	}
+
+	&__content {
+		max-width: 613rem;
+		@include small-tablet {
+			max-width: 62%;
+		}
+
+		@include large-mobile {
+			max-width: inherit;
+		}
+	}
+
+	&__img {
+		position: absolute;
+		right: 40rem;
+		top: 50%;
+		transform: translateY(-50%) scale(.85);
+		transition: ease .3s;
+		opacity: 0;
+		width: 390rem;
+
+		@include small-tablet {
+			right: 20rem;
+			width: 30%;
+			opacity: 1;
+			transform: translateY(-50%) scale(1);
+		}
+
+		@include large-mobile {
+			transform: none!important;
+			right: auto;
+			left: 16px;
+			top: -40rem;
+			width: 179rem;
+		}
+	}
+
+	&__bg {
+		width: 886rem;
+		height: 168rem;
+		overflow: hidden;
+		position: absolute;
+		background: $red;
+		border-radius: 40rem;
+		left: -64rem;
+		top: 50%;
+		transform: translateY(-50%);
+		margin-left: 70rem;
+		transition: ease .2s;
+
+		@include small-desktop {
+			display: none;
+		}
+	}
+
+	&__arrow {
+		position: absolute;
+		right: 16px;
+		top: 16rem;
+		display: block;
+		width: 40rem;
+		height: 41rem;
+		background: url('/img/services__arrow.svg') 0 0 no-repeat;
+		background-size: 100% 100%;
+	}
+}

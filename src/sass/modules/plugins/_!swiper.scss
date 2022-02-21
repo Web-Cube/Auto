@@ -15,12 +15,28 @@
 	}
 	&-navigation {
 		display: flex;
+		position: absolute;
 	}
 	&-button {
 		&-prev, &-next {
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			position: relative;
+			z-index: 50;
+			width: 64rem;
+			height: 64rem;
+			cursor: pointer;
+			transition: ease .2s;
+			fill: $black;
+			&:hover {
+				fill: $red;
+			}
+
+			@include large-mobile {
+				width: 40rem;
+				height: 40rem;
+			}
 		}
 	}
 }
