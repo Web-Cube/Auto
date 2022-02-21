@@ -1,4 +1,4 @@
-+b.SECTION.calculator.js-calc
++b.SECTION.calculator.js-calc.animateme.js-animateme
 	+e.wrap.wrap
 		+e.row.flex._justify
 			+e.column._left
@@ -38,17 +38,27 @@
 						+e.item.js-select-item(data-value="День всех влюбленных") День всех влюбленных
 			+e.column._right
 				+e.result
-					+e.result-list
-						+e.result-item
-							+e.result-title Ваша ставка:
-							+e.result-text.color-red 3.5%
-						+e.result-item
-							+e.result-title Сумма процентов:
-							+e.result-text
-								span.js-amount-percent 65 000
-								|  ₽
-						+e.result-item
-							+e.result-title Сумма к возврату:
-							+e.result-text
-								span.js-amount-return 224 500
-								|  ₽
+					+e.result-wrap
+						+e.result-list
+							+e.result-item
+								+e.result-title Ваша ставка:
+								+e.result-text.color-red 3.5%
+							+e.result-item
+								+e.result-title Сумма процентов:
+								+e.result-text
+									span.js-amount-percent 65 000
+									|  ₽
+							+e.result-item
+								+e.result-title Сумма к возврату:
+								+e.result-text
+									span.js-amount-return 224 500
+									|  ₽
+						+e.result-bottom
+							+e.result-links.flex._justify
+								+e.A.link.link(href="#") Условия займа
+								+e.A.link.link(href="#") График платежей
+							+btn(class="__result-btn js-modal" href="#modal-loan") Получить одобрение
+							+e.result-polity.color-gray
+								| Расчет не является предложением и может быть изменен в меньшую или большую сторону при осмотре авто.
+					+e.car
+						img(src="/img/calculator__car.png")

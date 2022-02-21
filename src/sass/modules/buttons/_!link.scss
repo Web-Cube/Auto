@@ -1,0 +1,19 @@
+.link {
+	display: inline-block;
+	font-size: 13rem;
+	font-weight: 500;
+	color: $red;
+	line-height: 1.2;
+	&:after {
+		content: '';
+		display: block;
+		height: 1px;
+		background: $red;
+		transition: ease .2s;
+	}
+	&:hover {
+		&:after {
+			transform: scaleX(0);
+		}
+	}
+}

@@ -2,6 +2,7 @@
 	position: relative;
 
 	&.is-active {
+		z-index: 100;
 		.select {
 			&__list {
 				opacity: 1;
@@ -24,8 +25,14 @@
 		border-radius: 12rem;
 		cursor: pointer;
 		transition: ease .2s;
+		position: relative;
 		&:hover {
 			border-color: $black;
+		}
+
+		@include large-mobile {
+			height: 48rem;
+			padding: 12rem 12rem 10rem 16rem;
 		}
 	}
 
@@ -50,6 +57,7 @@
 		width: 100%;
 		padding: 9rem;
 		margin-top: 4rem;
+		background: #fff;
 		border: 1px solid #E6E9EF;
 		box-sizing: border-box;
 		box-shadow: 0px 4px 8px -2px rgba(42, 50, 70, 0.08);
@@ -70,6 +78,10 @@
 		border-radius: 10rem;
 		&:hover, &.is-active {
 			background: #F8F8F8;
+		}
+
+		@include large-mobile {
+			min-height: 48rem;
 		}
 	}
 }

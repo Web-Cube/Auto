@@ -113,6 +113,15 @@ var defaults = {
 				}
 			});
 		});
+
+		// Клик вне select
+		const select = document.querySelector('.js-select');
+
+		document.onclick = function(e){
+		    if ( event.target.className != 'js-select' ) {
+		    	select.classList.remove('is-active');
+		    };
+		};
 	},
 
 	toggleMobile: (e) => {

@@ -24,17 +24,32 @@
 	&__counter {
 		margin-top: 16rem;
 		font-size: 30rem;
+
+		@include large-mobile {
+			margin-top: 4px;
+			font-size: 24rem;
+		}
 	}
 
 	&__scale {
 		margin-top: 18rem;
-		margin-left: 12rem;
-		margin-right: 12rem;
+		margin-left: 10rem;
+		margin-right: 10rem;
+
+		@include large-mobile {
+			margin-left: 8rem;
+			margin-right: 8rem;
+		}
 	}
 
 	&__bottom {
 		font-size: 14rem;
 		margin-top: 18rem;
+
+		@include large-mobile {
+			margin-top: 16rem;
+			font-size: 12rem;
+		}
 	}
 
 	&__column {
@@ -45,6 +60,12 @@
 		}
 		&:last-child {
 			text-align: right;
+		}
+
+		@include large-mobile {
+			&:nth-child(2) {
+				padding-right: 14rem;
+			}
 		}
 	}
 }
