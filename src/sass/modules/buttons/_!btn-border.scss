@@ -10,9 +10,28 @@
 	transition: ease .2s;
 	padding: 0 24rem;
 	color: $red;
+
+	&_black {
+		padding: 0 32rem;
+		border-color: $black;
+		color: $black;
+	}
+
 	&:hover {
 		background: $red;
+		border-color: $red;
 		color: #fff;
+		.btn-border__location {
+			fill: #fff;
+		}
+	}
+
+	&__location {
+		width: 20rem;
+		height: 20rem;
+		fill: $black;
+		margin-right: 10rem;
+		transition: ease .2s;
 	}
 	
 }

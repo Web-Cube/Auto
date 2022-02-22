@@ -162,6 +162,23 @@ var defaults = {
 		
 	},
 
+	faq: (e) => {
+		
+		let parrent = $(e.currentTarget).closest('.js-faq-item')
+		
+		if ( parrent.hasClass('is-active') ) {
+			parrent.removeClass('is-active');
+			parrent.find('.js-faq-body').slideUp(300);
+		} else {
+			$('.js-faq-item.is-active').removeClass('is-active');
+			$('.js-faq-body:visible').slideUp(300);
+
+			parrent.addClass('is-active');
+			parrent.find('.js-faq-body').slideDown(300);
+		}
+		
+	},
+
 	init: () => {
 
 		defaults.events();
@@ -169,10 +186,12 @@ var defaults = {
 		$(document).on('click', '.js-select-head', defaults.select);
 		$(document).on('click', '.js-select-item', defaults.selectItem);
 		$(document).on('click', '.js-video-prview', defaults.video);
+		$(document).on('click', '.js-faq-head', defaults.faq);
 
 		$('.js-mobile-close').click(function(){
 			$('.js-burger').click();
 		});
+
 
 	}
 }

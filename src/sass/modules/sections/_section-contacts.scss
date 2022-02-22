@@ -1,0 +1,96 @@
+.section-contacts {
+	padding: 120rem 0 67rem 0;
+	position: relative;
+	overflow: hidden;
+
+	@include large-mobile {
+		padding: 50rem 0 40rem 0;
+	}
+
+	&__desc {
+		margin-top: 13rem;
+
+		@include large-mobile {
+			margin-top: 8rem;
+			max-width: 318rem;
+		}
+	}
+
+	&__bg {
+		height: 384rem;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		background: linear-gradient(180deg, #F8F8F8 0%, rgba(248, 248, 248, 0) 100%);
+		transform: matrix(1, 0, 0, -1, 0, 0);
+	}
+
+	&__list {
+		padding-top: 48rem;
+		position: relative;
+		z-index: 2;
+
+		@include large-mobile {
+			padding-top: 0;
+		}
+	}
+	&__item {
+		margin-top: 50rem;
+		width: 531rem;
+		&-title {
+			font-weight: 600;
+			line-height: 120%;
+			max-width: 390rem;
+		}
+		&-bottom {
+			margin-top: 32rem;
+		}
+
+		@include small-tablet {
+			width: 50%;
+		}
+
+		@include large-mobile {
+			margin-top: 40rem;
+			width: 100%;
+			&-title {
+				font-size: 18rem;
+			}
+			&-bottom {
+				margin-top: 24px;
+			}
+		}
+	}
+	&__time {
+		margin-top: 40rem;
+
+		@include large-mobile {
+			margin-top: 24px;
+		}
+	}
+	&__phone {
+		margin-top: 24rem;
+		@include large-mobile {
+			margin-top: 16px;
+		}
+	}
+	&__messengers {
+		margin-left: 28rem;
+	}
+	&__img {
+		width: 398rem;
+		position: absolute;
+		right: -100rem;
+		bottom: -67rem;
+		pointer-events: none;
+
+		@include small-desktop {
+			right: -30rem;
+			width: 370rem;
+		}
+		@include small-tablet {
+			display: none;
+		}
+	}
+}
