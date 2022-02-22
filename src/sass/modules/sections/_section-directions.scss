@@ -6,6 +6,39 @@
 		overflow: hidden;
 	}
 
+	&.animateme {
+		.direction__item {
+			opacity: 0;
+			transition-duration: .8s;
+			transition-timing-function: ease-out;
+			transform: translateY(40rem);
+			&:nth-child(2) {
+				transition-delay: .1s;
+			}
+			&:nth-child(3) {
+				transition-delay: .2s;
+			}
+			&:nth-child(4) {
+				transition-delay: .3s;
+			}
+
+			@include small-tablet {
+				&:nth-child(odd) {
+					transform: translateY(0) translateX(25rem);
+				}
+				&:nth-child(even) {
+					transform: translateY(0) translateX(25rem);
+				}
+			}
+		}
+		&.show {
+			.direction__item {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+	}
+
 	&__title {
 		@include large-mobile {
 			font-size: 23rem;
@@ -49,7 +82,7 @@
 		margin-top: 50rem;
 		text-align: center;
 		&:hover {
-			.services__rect {
+			.direction__rect {
 				opacity: 1;
 				margin-top: 0;
 			}

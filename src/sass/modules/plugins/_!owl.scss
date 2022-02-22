@@ -1,0 +1,17 @@
+.owl {
+	&-stage {
+		display: flex;
+	}
+	&-item {
+		flex-shrink: 0;
+		min-height: 100%;
+		position: relative;
+	}
+	&-nav {
+		display: flex;
+	}
+	&-prev, &-next {
+		background: none;
+		border: 0;
+	}
+}

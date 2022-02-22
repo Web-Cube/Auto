@@ -152,12 +152,23 @@ var defaults = {
 		
 	},
 
+	video: (e) => {
+
+		let parrent = $(e.currentTarget).closest('.js-video');
+		let video = $(e.currentTarget).data('video');
+		
+		parrent.addClass('is-active');
+		parrent.find('.js-video-html').html(video)
+		
+	},
+
 	init: () => {
 
 		defaults.events();
 		$(document).on('click', '.js-burger', defaults.toggleMobile);
 		$(document).on('click', '.js-select-head', defaults.select);
 		$(document).on('click', '.js-select-item', defaults.selectItem);
+		$(document).on('click', '.js-video-prview', defaults.video);
 
 		$('.js-mobile-close').click(function(){
 			$('.js-burger').click();

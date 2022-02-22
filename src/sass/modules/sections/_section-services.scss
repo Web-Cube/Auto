@@ -179,10 +179,14 @@
 		position: absolute;
 		right: 16px;
 		top: 16rem;
-		display: block;
+		display: none;
 		width: 40rem;
 		height: 41rem;
 		background: url('/img/services__arrow.svg') 0 0 no-repeat;
 		background-size: 100% 100%;
+
+		@include large-mobile {
+			display: block;
+		}
 	}
 }

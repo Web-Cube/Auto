@@ -39,4 +39,19 @@
 			}
 		}
 	}
+	&-progress {
+		height: 4px;
+		background: #E6E9EF;
+		margin-top: 38rem;
+		&-load {
+			background: $red;
+			transition: ease .2s;
+			height: 4px;
+			width: 0;
+		}
+
+		@include large-mobile {
+			margin-top: 30px;
+		}
+	}
 }
