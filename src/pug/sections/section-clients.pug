@@ -1,0 +1,61 @@
+- 
+	var sliderClients = {
+		slidesPerView: 1,
+		loop: true,
+		speed: 400
+	}
+
++b.SECTION.clients.animateme.js-animateme
+	+e.wrap.wrap
+		+e.H2.title.h2 Отзывы об автоломбарде
+		+e.desc.p20.color-gray Для нас важно, чтобы вы увидели честную оценку наших клиентов
+		+e.avatars
+			+e.avatar
+				img.object-fit(src="/img/avatar1.jpg")
+			+e.avatar
+				img.object-fit(src="/img/avatar2.jpg")
+			+e.avatar
+				img.object-fit(src="/img/avatar3.jpg")
+			+e.avatar
+				img.object-fit(src="/img/avatar4.jpg")
+			+e.avatar
+				img.object-fit(src="/img/avatar5.jpg")
+			+e.avatar
+				img.object-fit(src="/img/avatar6.jpg")
+		+e.slider
+			+e.slider-bg
+			+e.slider-container.swiper-container.js-slider#clients(data-settings=sliderClients)
+				+swiper-navigation
+				.swiper-wrapper
+					+e.slide.swiper-slide
+						+e.item
+							+e.content
+								p
+									| Благадарю ребят в этом ломбарде от всей души, сделали все быстро, четко и понятно все пояснили, деньги пришли в оговоренный срок, (брал под птс), а закрыли так вообще за минуту. Успехом вашей компании в этом деле. По мне «Доверие авто» лучшие на рынке данных услуг.
+							+e.info
+								+e.name.h4 Виктор Я.
+								+e.position Клиент автоломбарда «Доверие авто»
+					+e.slide.swiper-slide
+						+e.item
+							+e.content
+								p
+									| Благадарю ребят в этом ломбарде от всей души, сделали все быстро, четко и понятно все пояснили, деньги пришли в оговоренный срок
+							+e.info
+								+e.name.h4 Виктор Я.
+								+e.position Клиент автоломбарда «Доверие авто»
+					+e.slide.swiper-slide
+						+e.item
+							+e.content
+								p
+									| Благадарю ребят в этом ломбарде от всей души, сделали все быстро, четко и понятно все пояснили, деньги пришли в оговоренный срок, (брал под птс), а закрыли так вообще за минуту. Успехом вашей компании в этом деле. По мне «Доверие авто» лучшие на рынке данных услуг.
+							+e.info
+								+e.name.h4 Виктор Я.
+								+e.position Клиент автоломбарда «Доверие авто»
+					+e.slide.swiper-slide
+						+e.item
+							+e.content
+								p
+									| Благадарю ребят в этом ломбарде от всей души, сделали все быстро, четко и понятно все пояснили, деньги пришли в оговоренный срок, (брал под птс), а закрыли так вообще за минуту. Успехом вашей компании в этом деле. По мне «Доверие авто» лучшие на рынке данных услуг.
+							+e.info
+								+e.name.h4 Виктор Я.
+								+e.position Клиент автоломбарда «Доверие авто»

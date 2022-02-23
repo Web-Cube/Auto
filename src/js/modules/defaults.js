@@ -116,12 +116,13 @@ var defaults = {
 
 		// Клик вне select
 		const select = document.querySelector('.js-select');
-
-		document.onclick = function(e){
-		    if ( event.target.className != 'js-select' ) {
-		    	select.classList.remove('is-active');
-		    };
-		};
+			document.onclick = function(e){
+				if ( $('.js-select').hasClass('is-active') ) {
+				    if ( event.target.className != 'js-select' ) {
+				    	select.classList.remove('is-active');
+				    };
+				}
+			};
 	},
 
 	toggleMobile: (e) => {

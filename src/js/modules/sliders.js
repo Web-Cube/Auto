@@ -15,7 +15,6 @@ var sliders = {
 			let navNext = $(id).closest("section").find('.swiper-button-next');
 			let navScrollbar = $(id).closest("section").find('.swiper-scrollbar');
 
-
 			let settings = {
 				loop: true,
 				slidesPerView: "auto",
