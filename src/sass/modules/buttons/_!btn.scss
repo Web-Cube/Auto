@@ -14,6 +14,10 @@
 	transition: ease .2s;
 	padding-top: 2rem;
 
+	&:hover {
+		background: #C93632;
+	}
+
 	@include large-mobile {
 		height: 48rem;
 		font-size: 16rem;

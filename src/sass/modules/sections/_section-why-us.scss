@@ -1,0 +1,132 @@
+.why-us {
+	padding: 127rem 0 179rem 0;
+	.animateme {
+		.why-us__item {
+			opacity: 0;
+			transition-duration: .8s;
+			transition-timing-function: ease-out;
+			transform: translateY(40rem);
+			&:nth-child(2) {
+				transition-delay: .1s;
+			}
+			&:nth-child(3) {
+				transition-delay: .2s;
+			}
+			&:nth-child(4) {
+				transition-delay: .3s;
+			}
+
+			@include small-tablet {
+				&:nth-child(odd) {
+					transform: translateY(0) translateX(25rem);
+				}
+				&:nth-child(even) {
+					transform: translateY(0) translateX(25rem);
+				}
+			}
+		}
+		&.show {
+			.why-us__item {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+	}
+	@include large-mobile {
+		padding: 52rem 0 60rem 0;
+	}
+	&__column {
+		width: 50%;
+		max-width: 602rem;
+
+		@include small-tablet {
+			width: 100%;
+			max-width: inherit;
+			&:not(:first-child) {
+				margin-top: 24px;
+			}
+		}
+	}
+	&__desc {
+		font-size: 13rem;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+		font-weight: bold;
+		margin-bottom: 16rem;
+
+		@include large-mobile {
+			font-size: 12rem;
+			margin-bottom: 12px;
+		}
+	}
+	&__title {
+		@include large-mobile {
+			font-size: 20rem;
+			max-width: 286rem;
+		}
+	}
+	&__content {
+		p {
+			font-size: 18rem;
+			&:not(:first-child) {
+				margin-top: 25rem;
+			}
+		}
+
+		@include large-mobile {
+			p {
+				font-size: 14rem;
+				&:not(:first-child) {
+					margin-top: 20px;
+				}
+			}
+		}
+	}
+
+	&__list {
+		padding-top: 80rem;
+		@include small-tablet {
+			padding-top: 15px;
+		}
+	}
+
+	&__item {
+		margin-top: 40rem;
+		max-width: 25%;
+		font-family: 'Montserrat Alternates';
+		font-weight: 600;
+		&-number {
+			font-size: 80rem;
+			line-height: 140%;
+		}
+		&-text {
+			font-size: 20rem;
+			line-height: 120%;
+		}
+
+		@include small-tablet {
+			&-number {
+				font-size: 60rem;
+			}
+			&-text {
+				font-size: 16rem;
+				margin-top: 5px;
+			}
+		}
+
+		@include large-mobile {
+			margin-top: 32px;
+			width: 50%;
+			max-width: inherit;
+			padding-left: 12rem;
+			border-left: 1px solid $red;
+			&-number {
+				font-size: 40rem;
+				line-height: 100%;
+			}
+			&-text {
+				font-size: 12rem;
+			}
+		}
+	}
+}

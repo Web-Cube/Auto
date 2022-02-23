@@ -1,0 +1,29 @@
++b.SECTION.about.animate.js-load-animate
+	+e.wrap.wrap
+		+e.scene
+			+e.bg
+				img.object-fit(src="/app/img/about__bg.svg")
+			+e.img
+				img(src="/img/about__car.png")
+		+e.box.flex._right
+			+e.box-wrap
+				+e.H1.title.h1 О компании
+				+e.content
+					p
+						| «Доверие авто» поможет получить займ под залог ПТС автомобиля на самых выгодных условиях. Мы помогаем людям с плохой кредитной историей, просрочками платежей и другими финансовыми трудностями получить займ под залог ПТС. Любой заемщик, обращаясь к нам может получить до 10 000 000 ₽ на срок до 3 лет, со ставкой от 2% в месяц.
+					p
+						| Вы получите необходимую сумму в течение 30 минут, без подтверждения дохода, справок с места работы и поручителей. При этом автомобиль остается у владельца, с правом собственности и пользования.
+				+e.FORM.form(action="/app/mail/")
+					+field(placeholder="+7 (___) ___-__-__" name="phone" type="tel")
+					+btn(false) Получить займ
+				+e.polity.color-gray
+					| Нажимая на кнопку «Получить заем» я соглашаюсь на обработку персональных данных и согласен с политикой конфиденциальности
+.wrap
+	+b.video._about.js-video.animate.js-load-animate
+		+e.html.js-video-html
+		+e.preview.js-video-preview(data-video='<iframe src="https://www.youtube.com/embed/8V46_T19tHQ?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
+			img.object-fit(src="/img/video__preview.jpg")
+			+e.play.play__
+				+icon('play')
+		+e.btn-down.btn-down__
+			+icon('arrowDown')

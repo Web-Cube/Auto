@@ -1,0 +1,26 @@
+.play {
+	width: 80rem;
+	height: 80rem;
+	border: 5rem solid #fff;
+	border-radius: 100%;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	fill: #fff;
+	padding-left: 7rem;
+	transition: ease .2s;
+	svg {
+		width: 30rem;
+		height: 340rem;
+	}
+
+	@include large-mobile {
+		width: 64rem;
+		height: 64rem;
+		border-width: 4rem;
+		svg {
+			width: 24rem;
+			height: 32rem;
+		}
+	}
+}

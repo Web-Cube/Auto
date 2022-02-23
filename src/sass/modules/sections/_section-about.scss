@@ -1,0 +1,152 @@
+.about {
+	padding-top: 197rem;
+	background: linear-gradient(180deg, #FFFAFA 0%, #F5E7E7 86.56%);
+
+	@include large-mobile {
+		padding: 26rem 0 90rem 0;
+	}
+
+	&.animate {
+		.about {
+			&__img, &__box-wrap {
+				opacity: 0;
+				transition-duration: .7s;
+				transition-timing-function: ease-out;
+			}
+			&__img {
+				transform: scale(.85);
+			}
+			&__box-wrap {
+				transition-delay: .5s;
+			}
+		}
+		&.show {
+			.about {
+				&__img, &__box-wrap {
+					opacity: 1;
+				}
+				&__img {
+					transform: scale(1);
+				}
+			}
+		}
+
+		@include small-tablet {
+			.about {
+				&__box-wrap {
+					transition-delay: 0;
+				}
+			}
+		}
+	}
+
+	&__wrap {
+		padding-bottom: 252rem;
+		@include large-mobile {
+			padding-bottom: 0;
+		}
+	}
+
+	&__box {
+		&-wrap {
+			width: 602rem;
+		}
+
+		@include small-tablet {
+			&-wrap {
+				width: auto;
+			}
+		}
+	}
+
+	&__content {
+		margin-top: 45rem;
+		p {
+			font-size: 18rem;
+			&:not(:first-child) {
+				margin-top: 25rem;
+			}
+		}
+
+		@include large-mobile {
+			margin-top: 24px;
+			p {
+				font-size: 14rem;
+				&:not(:first-child) {
+					margin-top: 20px;
+				}
+			}
+		}
+	}
+
+	&__form {
+		margin-top: 45rem;
+		display: flex;
+
+		@include large-mobile {
+			margin-top: 32px;
+			display: block;
+		}
+	}
+	&__field {
+		width: 100%;
+		margin-right: 24rem;
+
+		@include large-mobile {
+			margin-right: 0;
+		}
+	}
+	&__btn {
+		min-width: 228rem;
+
+		@include large-mobile {
+			width: 100%;
+			margin-top: 16px;
+		}
+	}
+	&__polity {
+		font-size: 12rem;
+		max-width: 496rem;
+		margin-top: 24rem;
+		
+		@include large-mobile {
+			margin-top: 16px;
+			font-size: 10rem;
+		}
+	}
+
+	&__scene {
+		width: 1009rem;
+		height: 744rem;
+		position: absolute;
+		left: -619rem;
+		bottom: 0;
+		pointer-events: none;
+
+		@include small-desktop {
+			left: -550rem;
+		}
+
+		@include small-tablet {
+			display: none;
+		}
+	}
+
+	&__bg {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		background: $red;
+		border-radius: 0 217rem 0 0;
+	}
+
+	&__img {
+		width: 1027rem;
+		position: absolute;
+		right: -296rem;
+		top: -52rem;
+	}
+}

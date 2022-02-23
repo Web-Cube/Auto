@@ -10,6 +10,20 @@
 		&_red {
 			fill: $red;
 		}
+		&_blue {
+			fill: #0088CC;
+		}
+		&_whatsapp {
+			background: url('/img/whatsappBig.svg') 0 0 no-repeat;
+			background-size: 100% 100%;
+		}
+		&_big {
+			width: 32rem;
+			height: 32rem;
+			&:not(:last-child) {
+				margin-right: 8rem;
+			}
+		}
 
 		@include small-tablet {
 			&:not(:last-child) {

@@ -1,3 +1,143 @@
 .footer {
-	margin-top: 80rem;
+	padding-top: 80rem;
+	padding-bottom: 60rem;
+
+	@include large-mobile {
+		padding: 40rem 0;
+	}
+
+	&__column {
+		max-width: 305rem;
+		min-width: 180rem;
+
+		@include large-mobile(100) {
+			max-width: 27%;
+			min-width: 150rem;
+		}
+
+		@include large-mobile {
+			max-width: inherit;
+			width: 100%;
+			&:nth-child(2), &:nth-child(3) {
+				margin-top: 24px;
+				width: 50%;
+			}
+		}
+	}
+	&__logo {
+		width: 213rem;
+		display: block;
+
+		@include large-mobile {
+			width: 162rem;
+		}
+	}
+
+	&__desc {
+		font-size: 18rem;
+		margin-top: 38rem;
+
+		@include large-mobile(100) {
+			br {
+				display: none;
+			}
+		}
+
+		@include large-mobile {
+			margin-top: 24px;
+			font-size: 16rem;
+		}
+	}
+
+	&__text {
+		font-size: 14rem;
+		margin-top: 32rem;
+		@include large-mobile {
+			margin-top: 8px;
+			font-size: 12rem;
+		}
+	}
+	&__copyright {
+		font-size: 16rem;
+		margin-top: 40rem;
+		&_mobile {
+			display: none;
+		}
+		@include large-mobile {
+			font-size: 12rem;
+			margin-top: 24px;
+			&_mobile {
+				display: block;
+			}
+			&_desktop {
+				display: none;
+			}
+		}
+	}
+	&__nav {
+		margin-top: 24rem;
+		list-style: none;
+
+		@include large-mobile {
+			margin-top: 16px;
+		}
+	}
+	&__item {
+		&:not(:first-child) {
+			margin-top: 16rem;
+		}
+		@include large-mobile {
+			font-size: 14rem;
+			&:not(:first-child) {
+				margin-top: 8rem;
+			}
+		}
+	}
+	&__link {
+		color: $gray;
+		transition: ease .2s;
+		&:hover {
+			color: $red;
+		}
+	}
+
+	&__contact {
+		margin-top: 24rem;
+		&-item {
+			&:not(:first-child) {
+				margin-top: 14rem;
+			}
+		}
+	}
+	&__phone {
+		font-weight: 500;
+		font-size: 18rem;
+	}
+	&__section {
+		&:not(:first-child) {
+			margin-top: 39rem;
+		}
+
+		@include large-mobile {
+			margin-top: 32px;
+			&:not(:first-child) {
+				margin-top: 39px;
+			}
+		}
+	}
+	&__email {
+		margin-top: 16rem;
+		a {
+			color: $red;
+		}
+	}
+	&__polity {
+		margin-top: 26rem;
+		font-size: 13rem;
+		font-weight: 500;
+		text-decoration: underline;
+	}
+	&__messengers {
+		margin-top: 16rem;
+	}
 }

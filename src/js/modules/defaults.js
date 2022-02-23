@@ -185,7 +185,7 @@ var defaults = {
 		$(document).on('click', '.js-burger', defaults.toggleMobile);
 		$(document).on('click', '.js-select-head', defaults.select);
 		$(document).on('click', '.js-select-item', defaults.selectItem);
-		$(document).on('click', '.js-video-prview', defaults.video);
+		$(document).on('click', '.js-video-preview', defaults.video);
 		$(document).on('click', '.js-faq-head', defaults.faq);
 
 		$('.js-mobile-close').click(function(){

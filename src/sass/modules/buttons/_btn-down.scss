@@ -1,0 +1,25 @@
+.btn-down {
+	width: 64rem;
+	height: 64rem;
+	background: #fff;
+	box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.1);
+	border-radius: 100%;
+	cursor: default;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	fill: $red;
+	svg {
+		width: 40rem;
+		height: 40rem;
+	}
+
+	@include large-mobile {
+		width: 40rem;
+		height: 40rem;
+		svg {
+			width: 25rem;
+			height: 25rem;
+		}
+	}
+}
