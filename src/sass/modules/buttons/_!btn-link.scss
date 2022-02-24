@@ -1,0 +1,52 @@
+.btn-link {
+	display: inline-flex;
+	align-items: center;
+	font-size: 13rem;
+	font-weight: 500;
+	color: $red;
+	transition: ease .2s;
+	&__text {
+		display: block;
+		line-height: 115%;
+		&:after {
+			content: '';
+			display: block;
+			height: 1px;
+			background: $red;
+			transition: ease .2s;
+		}
+	}
+
+	&__icon-route {
+		width: 21rem;
+		height: 21rem;
+		fill: none;
+		stroke: $red;
+		stroke-width: 1.5;
+		margin-right: 8rem;
+		position: relative;
+		top: -2rem;
+	}
+
+	&:hover {
+		color: #C93632;
+		.btn-link {
+			&__text {
+				&:after {
+					transform: scaleX(0);
+				}
+			}
+			&__icon-route {
+				stroke: #C93632;
+			}
+		}
+	}
+
+	@include large-mobile {
+		font-size: 12rem;
+		&__icon-route {
+			width: 20rem;
+			height: 20rem;
+		}
+	}
+}

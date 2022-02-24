@@ -16,7 +16,7 @@
 		@include large-mobile {
 			text-align: center;
 			margin-top: 8rem;
-			padding-bottom: 8rem;
+			padding-bottom: 0;
 		}
 	}
 
@@ -91,6 +91,20 @@
 			&-btn {
 				margin-top: 24rem;
 			}
+		}
+	}
+	&__car {
+		position: absolute;
+		left: 0;
+		bottom: -125rem;
+		width: 342rem;
+		pointer-events: none;
+
+		@include large-mobile {
+			left: auto;
+			bottom: -44rem;
+			right: 21rem;
+			width: 143rem;
 		}
 	}
 }

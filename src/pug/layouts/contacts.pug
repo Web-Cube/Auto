@@ -1,0 +1,74 @@
++b.contacts.animate.js-load-animate
+	+e.wrap.wrap
+		+e.row.flex._justify._bottom
+			+e.column._left
+				+e.H1.title.h1 Контакты
+				+e.desc.p20.color-gray
+					| Свяжитесь с нами любым удомным способом. 
+					br
+					| Мы ответим на все интересующие вопросы.
+				+e.list
+					+e.item
+						+e.adress
+							| Санкт-Петербург, 
+							br
+							| улица Бабушкина, 21
+						+e.time.p20
+							| Режим работы: 
+							span.color-gray Ежедневно, с 9:00 до 20:00
+						+e.phone.p20
+							| Телефон: 
+							a.color-gray(href="tel:+79663844848") +7 966 384 48 48
+						+e.item-bottom.flex._vertical
+							+e.A.link.btn-link__.js-modal(href="#recall")
+								+e.SPAN.text Заказать звонок
+							+e.A.link.btn-link__(href="#")
+								+e.SPAN.icon-route
+									+icon('route')
+								+e.SPAN.text Проложить маршрут
+							+e.messengers.messengers__
+								+e.A.btn._red._small(href="#")
+									+icon('whatsapp')
+								+e.A.btn._red._small(href="#")
+									+icon('telegram')
+					+e.item
+						+e.adress
+							| Санкт-Петербург, 
+							br
+							| Северный проспект. д.5к3
+						+e.time.p20
+							| Режим работы: 
+							span.color-gray Ежедневно, с 9:00 до 20:00
+						+e.phone.p20
+							| Телефон: 
+							a.color-gray(href="tel:+79962212141") +7 996 221 21 41
+						+e.item-bottom.flex._vertical
+							+e.A.link.btn-link__.js-modal(href="#recall")
+								+e.SPAN.text Заказать звонок
+							+e.A.link.btn-link__(href="#")
+								+e.SPAN.icon-route
+									+icon('route')
+								+e.SPAN.text Проложить маршрут
+							+e.messengers.messengers__
+								+e.A.btn._red._small(href="#")
+									+icon('whatsapp')
+								+e.A.btn._red._small(href="#")
+									+icon('telegram')
+			+e.column._right
+				+e.box
+					+e.form-bg
+					+e.FORM.form.form__(action="/app/mail/")
+						+e.car
+							img(src="/img/contacts__form-car.png")
+						+e.title.h2 Оставить онлайн заявку
+						+e.desc.p20.color-gray
+							| Оставьте заявку на получение денег, и наш специалист вам скоро перезвонит
+						+e.fields
+							+field(placeholder="Марка машины" name="brand")
+							+field(placeholder="Сумма займа" name="фьщгте")
+							+field(placeholder="Ваше имя" name="name")
+							+field(placeholder="Номер телефона" name="phone" type="tel")
+						+e.bottom.flex._justify
+							+e.polity.color-gray
+								| Нажимая на кнопку, вы даете согласие на обработку ваших персональных данных
+							+btn(false) Отправить заявку

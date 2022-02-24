@@ -1,0 +1,167 @@
+.contacts {
+	padding: 157rem 0 125rem 0;
+	background: linear-gradient(180deg, #FFFAFA 0%, #F5E7E7 86.56%);
+
+	&.animate {
+		.contacts {
+			&__box {
+				opacity: 0;
+				transition: ease-out .7s;
+				transform: translateY(50rem);
+			}
+			&__form-bg {
+				transform: scaleX(.8);
+				transition: ease-out .5s;
+				transition-delay: .35s;
+			}
+		}
+		&.show {
+			.contacts {
+				&__box {
+					opacity: 1;
+					transform: translateY(0);
+				}
+				&__form-bg {
+					transform: scaleX(1);
+				}
+			}
+		}
+	}
+	@include large-mobile {
+		padding: 26rem 0 0 0;
+	}
+
+	&__desc {
+		margin-top: 18rem;
+
+		@include large-mobile {
+			margin-top: 8px;
+		}
+	}
+
+	&__list {
+		margin-top: 60rem;
+
+		@include large-mobile {
+			margin-top: 32px;
+		}
+	}
+	&__item {
+		&:not(:first-child) {
+			margin-top: 35rem;
+		}
+		&-bottom {
+			margin-top: 22rem;
+		}
+
+		@include large-mobile {
+			&:not(:first-child) {
+				margin-top: 32px;
+			}
+		}
+	}
+
+	&__column {
+		&_left {
+			width: 415rem;
+		}
+		&_right {
+			width: 710rem;
+		}
+
+		@include small-tablet {
+			&_right {
+				width: 52%;
+			}
+			&_left {
+				width: 46%;
+			}
+		}
+
+		@include large-mobile {
+			width: 100%;
+		}
+	}
+	&__adress {
+		font-size: 20rem;
+		font-weight: 600;
+		line-height: 120%;
+		font-family: 'Montserrat Alternates';
+
+		@include large-mobile {
+			font-size: 18rem;
+		}
+	}
+	&__time {
+		margin-top: 24rem;
+
+		@include large-mobile {
+			margin-top: 24px;
+		}
+	}
+	&__phone {
+		margin-top: 16rem;
+
+		@include large-mobile {
+			margin-top: 8px;
+		}
+	}
+
+	&__messengers {
+		margin-left: 28rem;
+	}
+	&__link {
+		&:not(:first-child) {
+			margin-left: 24rem;
+		}
+
+		@include large-mobile {
+			&:not(:first-child) {
+				margin-left: 16rem;
+			}
+		}
+	}
+
+	&__box {
+		position: relative;
+
+		@include large-mobile {
+			margin: 40px -16px -16px -16px;
+			padding: 0 16px;
+		}
+	}
+
+	&__form {
+		max-width: 625rem;
+		margin: 0 auto;
+		position: relative;
+		border-radius: 50rem;
+		padding: 60rem 64rem;
+		&-bg {
+			position: absolute;
+			left: 0;
+			top: 64rem;
+			width: 100%;
+			height: calc( 100% - 64rem - 52rem );
+			background: $red url('/img/contacts__form-bg.svg') top no-repeat;
+			border-radius: 40rem;
+			box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.1);
+		}
+
+		@include small-tablet {
+			padding-left: 40rem;
+			padding-right: 40rem;
+		}
+
+		@include large-mobile {
+			max-width: none;
+			border-radius: 16rem;
+			padding: 32px 16px;
+			&-bg {
+				border-radius: 0;
+				top: 16px;
+				height: calc( 100% - 32px );
+			}
+		}
+	}
+}

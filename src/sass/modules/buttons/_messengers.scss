@@ -24,6 +24,13 @@
 				margin-right: 8rem;
 			}
 		}
+		&_small {
+			width: 24rem;
+			height: 24rem;
+			&:not(:last-child) {
+				margin-right: 12rem;
+			}
+		}
 
 		@include small-tablet {
 			&:not(:last-child) {
