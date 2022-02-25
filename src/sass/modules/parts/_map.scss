@@ -15,7 +15,7 @@
 	    -webkit-filter: grayscale(100%);
 	}
 	@include large-mobile {
-		margin-top: 16px;
+		margin-top: 0;
 		height: 320rem;
 		iframe {
 			height: 217rem;

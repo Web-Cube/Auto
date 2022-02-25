@@ -41,6 +41,26 @@ var defaults = {
 		        $(this).css("transition-delay",animate_delay+"ms");
 		        if ( win_scroll >= animate_pos ) {
 		            $(this).addClass("show");
+		            var time = 20,
+  						cc = 1;
+				        $('.js-number').each(function() {
+					          var
+					            i = $(this).data('start'),
+					            num = $(this).data('num'),
+					            //step = 1000 * time / num,
+					            that = $(this),
+					            int = setInterval(function() {
+					              if (i <= num) {
+					                that.html(i);
+					              } else {
+					                cc = cc + 1;
+					                clearInterval(int);
+					              }
+					              i++;
+					            }, 30);
+					            $(this).removeClass('js-number')
+				        });
+		          
 		        }
 		    });
 		}
@@ -116,13 +136,12 @@ var defaults = {
 
 		// Клик вне select
 		const select = document.querySelector('.js-select');
-			document.onclick = function(e){
-				if ( $('.js-select').hasClass('is-active') ) {
-				    if ( event.target.className != 'js-select' ) {
-				    	select.classList.remove('is-active');
-				    };
-				}
-			};
+		window.addEventListener('click', e => { // при клике в любом месте окна браузера
+		    const target = e.target // находим элемент, на котором был клик
+		    if (!target.closest('.js-select')) { // если этот элемент или его родительские элементы не окно навигации и не кнопка
+		      select.classList.remove('is-active') // то закрываем окно навигации, удаляя активный класс
+		    }
+		  })
 	},
 
 	toggleMobile: (e) => {

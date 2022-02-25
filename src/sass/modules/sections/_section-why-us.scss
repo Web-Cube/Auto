@@ -1,5 +1,6 @@
 .why-us {
 	padding: 127rem 0 179rem 0;
+	overflow: hidden;
 	.animateme {
 		.why-us__item {
 			opacity: 0;
@@ -98,6 +99,7 @@
 		&-number {
 			font-size: 80rem;
 			line-height: 140%;
+			min-width: 210rem;
 		}
 		&-text {
 			font-size: 20rem;
