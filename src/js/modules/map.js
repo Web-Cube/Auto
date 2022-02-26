@@ -37,6 +37,8 @@ var map = {
 				            iconImageSize: size,
 				            iconImageOffset: offset,
 				        }));
+
+				    myMap.behaviors.disable('scrollZoom');
 				});
 			});
 		});

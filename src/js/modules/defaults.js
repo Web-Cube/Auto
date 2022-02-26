@@ -57,7 +57,7 @@ var defaults = {
 					                clearInterval(int);
 					              }
 					              i++;
-					            }, 30);
+					            }, 20);
 					            $(this).removeClass('js-number')
 				        });
 		          
